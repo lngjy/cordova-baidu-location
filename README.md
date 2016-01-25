@@ -1,10 +1,11 @@
+#本版本感谢 https://github.com/mrwutong/cordova-qdc-baidu-location  在此基础上进行升级与维护，并增加ios版本
+
+
 #百度地图定位Android版插件
 本插件利用百度地图提供的定位功能进行Android版手机定位。
-  
-####为什么没有iOS版？
-因为iOS版有官方的定位插件_cordova-plugin-geolocation_可以使用。
 
-请参照：[cordova-plugin-geolocation](https://github.com/apache/cordova-plugin-geolocation)
+
+#IOS版本正在开发中
 
 ####Android版为什么不使用官方的_cordova-plugin-geolocation_插件
 最新版的插件已经删除掉的Android版定位的代码，改为基于系统浏览器(chrome内核)进行定位。
@@ -15,8 +16,12 @@
 
 __此插件就这么诞生了__
 
+
+
+
+
 ####版本
-基于百度地图Android版定位SDK（v5.3）
+基于百度地图Android版定位SDK（v6.0.3）
 
 ####一，申请密钥
 请参照：[申请密钥Android定位SDK](http://developer.baidu.com/map/index.php?title=android-locsdk/guide/key)
@@ -24,7 +29,7 @@ __此插件就这么诞生了__
 ####二，安装插件
 
 ```
-ionic plugin add https://github.com/mrwutong/cordova-qdc-baidu-location --variable API_KEY="<API_KEY>"
+ionic plugin add https://github.com/lngjy/cordova-baidu-location.git --variable API_KEY="<API_KEY>"
 **注：此处的API_KEY来自于第一步，不带左右尖括号**
 ```
 
@@ -49,19 +54,11 @@ baidu_location.getCurrentPosition(successCallback, failedCallback);
 ####四，查看当前安装了哪些插件
 
 ```
-ionic plugin ls
+cordova plugin ls
 ```
 
 ####五，删除插件
 
 ```
-ionic plugin rm com.qdc.plugins.baidu.location
+cordova plugin rm https://github.com/lngjy/cordova-baidu-location.git
 ```
-
-
-
-
-
-
-
-
